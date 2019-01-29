@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Index</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body ontouchstart="">
+    <video autoplay muted playsinline loop id="bgv">
+        <source src="images/bgv.mp4" type="video/mp4">
+    </video>
+
+    <div class="btn" onclick="btnstart()" id="start-page">
+        <img src="images/start_btn.png">
+    </div>
+
+    <div class="page-2" id="info-page">
+        <div class="info-form">
+            <img src="images/form_frame.png">
+
+            <div class="form-title">
+                <label>Registration:</label>
+            </div>
+
+            <form action="process.php" method="post">
+                <label>Name:</label>
+                <br>
+                <input type="text" name="firstname" />
+                <br>
+                <label>Last Name:</label>
+                <br>
+                <input type="text" name="lastname" />
+                <br>
+                <label>Gender:</label>
+                <br>
+                <select name="gender">
+                    <option value=""></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <br>
+                <label>Specialty:</label>
+                <br>
+                <select name="specialty">
+                    <option value=""></option>
+                    <option value="Radiologist">Radiologist</option>
+                    <option value="Radiographer">Radiographer</option>
+                    <option value="Interventional Radiologist">Interventional Radiologist</option>
+                    <option value="Interventional Cardiologist">Interventional Cardiologist</option>
+                    <option value="General Practitioner">General Practitioner</option>
+                    <option value="Vendor">Vendor</option>
+                    <option value="Others">Others</option>
+                </select>
+                <br>
+                <label>Institution:</label>
+                <br>
+                <input type="text" name="institution" />
+                <br>
+                <label>Country:</label>
+                <br>
+                <input type="text" name="country" />
+                <br>
+                <label>Phone:</label>
+                <br>
+                <input type="tel" name="phone" />
+                <br>
+                <label>Email:</label>
+                <br>
+                <input type="email" name="email" />
+                <br>
+                <label>Using Guerbet Product:</label>
+                <br>
+                <select name="user" id="select" onclick="activeinput()" onfocusout="activeinput()">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <br>
+                <label>Please Specify:</label>
+                <br>
+                <input type="text" id="specify" name="specify" disabled />
+                <br>
+                <input type="submit" name="ok" value="NEXT">
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
